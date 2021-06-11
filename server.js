@@ -2,6 +2,7 @@ const express = require('express');
 const PORT = process.env.PORT || 3001;
 const app = express();
 const db = require('./db/connection');
+const cTable = require('console.table');
 
 //Middleware
 app.use(express.urlencoded({ extended: false}));
