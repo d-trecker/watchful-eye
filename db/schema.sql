@@ -2,7 +2,6 @@ DROP DATABASE IF EXISTS the_eye_db;
 CREATE DATABASE the_eye_db;
 USE the_eye_db;
 
-
 CREATE TABLE department (
     id INTEGER PRIMARY KEY AUTO_INCREMENT, 
     department_name VARCHAR(30) NOT NULL
