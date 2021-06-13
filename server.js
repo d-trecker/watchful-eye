@@ -3,6 +3,7 @@ const db = require("./db/connection");
 const inquirer = require("inquirer");
 const allDeparments = require("./utils/allDepartments");
 const allRoles = require("./utils/allRoles");
+const allEmployees = require("./utils/allEmployees");
 
 db.connect((err) => {
   if (err) throw err;
