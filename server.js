@@ -2,6 +2,7 @@ const mysql = require("mysql2");
 const db = require("./db/connection");
 const inquirer = require("inquirer");
 const allDeparments = require("./utils/allDepartments");
+const allRoles = require("./utils/allRoles");
 
 db.connect((err) => {
   if (err) throw err;
@@ -54,7 +55,7 @@ function startTracker() {
           quitApp();
           break;
       }
-    });
+    }); 
 }
 
 // View all department -- DONE. 
