@@ -1,5 +1,4 @@
 const db = require("../db/connection");
-const express = require("express");
 const cTable = require("console.table");
 
 //Searches for all departments. 

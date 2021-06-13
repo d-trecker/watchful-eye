@@ -1,26 +1,11 @@
-const express = require("express");
-const PORT = process.env.PORT || 3001;
-const app = express();
+const mysql = require("mysql2");
 const db = require("./db/connection");
-const cTable = require("console.table");
 const inquirer = require("inquirer");
 const allDeparments = require("./utils/allDepartments");
 
-//Middleware
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-
-// For not found request.
-app.use((req, res) => {
-  res.status(404).end();
-});
-
 db.connect((err) => {
   if (err) throw err;
-});
-
-app.listen(PORT, () => {
-  console.log(`Running on port ${PORT}`);
+  console.log(`Connected to Watchful Eye`);
   startTracker();
 });
 
@@ -72,9 +57,9 @@ function startTracker() {
     });
 }
 
-// View all department
+// View all department -- DONE. 
 // View all roles
-// View all employees --DONE.
+// View all employees 
 // Add a department
 // Add a role
 // Add an employee
