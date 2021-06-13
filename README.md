@@ -37,7 +37,7 @@ THEN I am presented with a formatted table showing employee data, including empl
 WHEN I choose to add a department
 THEN I am prompted to enter the name of the department and that department is added to the database
 
-- 
+- When you choose 'add a department', then you are prompted to enter the name of the department and that department is added to the database. 
 
 WHEN I choose to add a role
 THEN I am prompted to enter the name, salary, and department for the role and that role is added to the database

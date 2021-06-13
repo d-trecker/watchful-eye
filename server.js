@@ -1,19 +1,22 @@
-const mysql = require("mysql2");
+const util = require("util");
 const db = require("./db/connection");
 const inquirer = require("inquirer");
-const allDeparments = require("./utils/allDepartments");
+const allDepartments = require("./utils/allDepartments");
 const allRoles = require("./utils/allRoles");
 const allEmployees = require("./utils/allEmployees");
+const addDepartment = require("./utils/addDepartment");
 
 db.connect((err) => {
   if (err) throw err;
-  console.log(`Connected to Watchful Eye`);
+  console.log(`Connected to The Watchful Eye`);
   startTracker();
 });
 
+db.query = util.promisify(db.query);
+
 //Inquirer start
-function startTracker() {
-  inquirer
+const startTracker = async () => {
+  let pick = await inquirer
     .prompt({
       name: "choices",
       type: "list",
@@ -29,10 +32,9 @@ function startTracker() {
         "Exit",
       ],
     })
-    .then(function ({ choices }) {
-      switch (choices) {
+      switch (pick.choices) {
         case "View all departments":
-          allDeparments();
+          allDepartments();
           break;
         case "View all roles":
           allRoles();
@@ -53,16 +55,18 @@ function startTracker() {
           updateEmployee();
           break;
         case "Exit":
-          quitApp();
+          console.log("Goodbye.");
+          db.end();
           break;
-      }
-    }); 
+      };
+    
 }
 
-// View all department -- DONE. 
-// View all roles
-// View all employees 
-// Add a department
+
+// View all department -- DONE.
+// View all roles -- DONE.
+// View all employees  -- DONE.
+// Add a department --DONE.
 // Add a role
 // Add an employee
 // Update an employee role
