@@ -199,7 +199,7 @@ const addEmployee = async () => {
           value: role.id
         }
       }),
-      message: "What is the Employee's role ID?"
+      message: "What is the employee's role?"
     },
     {
       name: 'employeeManager',
@@ -210,7 +210,7 @@ const addEmployee = async () => {
           value: manager.id
         }
       }),
-      message: "What is the employee's Manager's ID?"
+      message: "What is the employee's manager?"
     }
   ])
   let addedEmployee = await db.query("INSERT INTO employee SET ?", {
@@ -262,12 +262,3 @@ const updateEmployee = async () => {
   console.log(`Their fate has been sealed.`);
   startTracker();
 };
-
-
-// View all department -- DONE.
-// View all roles -- DONE.
-// View all employees  -- DONE.
-// Add a department --DONE.
-// Add a role -- DONE.
-// Add an employee -- DONE.
-// Update an employee role
