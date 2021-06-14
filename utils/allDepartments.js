@@ -1,5 +1,5 @@
 const db = require("../db/connection");
-const cTable = require("console.table");
+const startTracker = require("./startTracker");
 
 //Searches for all departments. 
 module.exports = async () => {
@@ -12,5 +12,6 @@ module.exports = async () => {
     let departmentArray = [];
     res.forEach((department) => departmentArray.push(department));
     console.table(departmentArray);
+    startTracker();
   });
 };

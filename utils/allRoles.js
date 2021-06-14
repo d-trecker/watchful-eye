@@ -1,6 +1,6 @@
 const db = require("../db/connection");
 const cTable = require("console.table");
-// const startTracker = require("./startTracker");
+const startTracker = require("./startTracker");
 
 //Searches for all roles.
 module.exports = async () => {
@@ -13,6 +13,6 @@ module.exports = async () => {
       let rolesArray = [];
       res.forEach((role) => rolesArray.push(role));
       console.table(rolesArray);
-      // startTracker();
+      startTracker();
     });
 };
