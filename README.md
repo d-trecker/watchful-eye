@@ -5,7 +5,7 @@ Student: Dylan Trecker</br>
 Description: A command-line application that tracks your employees with the ever so looming watchful eye..</br>
 Full Repository: https://github.com/d-trecker/watchful-eye.git</br>
 Get the repository by: $ git clone git@github.com:d-trecker/watchful-eye.git </br>
-Video Link: https://drive.google.com/file/d/1qDFS0hdXY_GYz6TMtujefcHbQ8VBzKWk/view?usp=sharing </br>
+Video Link: https://drive.google.com/file/d/1OopntxvY1LyeYyTyvI6sXgTCgXCBJY1W/view?usp=sharing </br>
 
 User Story</br>
 AS A business owner
