@@ -5,7 +5,7 @@ Student: Dylan Trecker</br>
 Description: A command-line application that tracks your employees with the ever so looming watchful eye..</br>
 Full Repository: https://github.com/d-trecker/watchful-eye.git</br>
 Get the repository by: $ git clone git@github.com:d-trecker/watchful-eye.git </br>
-Video Link:  </br>
+Video Link: https://drive.google.com/file/d/1qDFS0hdXY_GYz6TMtujefcHbQ8VBzKWk/view?usp=sharing </br>
 
 User Story</br>
 AS A business owner
@@ -50,6 +50,6 @@ THEN I am prompted to enter the employee’s first name, last name, role, and ma
 - When you choose 'add an employee', you are prompted to enter the employee's first name, last name, role, and manager and that employee is added to the database.
 
 WHEN I choose to update an employee role
-THEN I am prompted to select an employee to update and their new role and this 
+THEN I am prompted to select an employee to update and their new role and this information is updated in the database 
 
-- 
+- When you choose 'update an employee role', you are prompted to select a employee and update their new role. The updated information is added to the database. 
