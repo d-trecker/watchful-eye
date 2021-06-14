@@ -1,5 +1,7 @@
 const db = require("../db/connection");
 const cTable = require("console.table");
+// const index = require("./startTracker");
+
 
 //searches for all employees and lists employee ids, first names, last names, job titles, departments, salaries, and managers
 module.exports = async () => {
@@ -23,6 +25,5 @@ module.exports = async () => {
     let employeeArray = [];
     res.forEach((employee) => employeeArray.push(employee));
     console.table(employeeArray);
-    // startTracker();
   });
 };
